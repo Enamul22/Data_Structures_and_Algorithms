@@ -1,11 +1,9 @@
 #include <iterator>
 #include <vector>
 #include <algorithm>
-
 #include "test.hh"
 
 using namespace std;
-
 
 /**
  * @brief Remove from vector v all elements with value less than the limit
@@ -15,6 +13,11 @@ using namespace std;
  */
 int removeLessThan(std::vector<int>& v, int limit)
 {
-    return EXIT_FAILURE;
+    v.erase(std::remove_if(v.begin(), v.end(), [limit](int value) {
+                return value < limit;
+            }), v.end());
+
+    return EXIT_SUCCESS; // Assuming removal is always successful
 }
+
 

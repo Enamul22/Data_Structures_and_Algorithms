@@ -1,11 +1,9 @@
 #include <iterator>
 #include <vector>
 #include <algorithm>
-
 #include "test.hh"
 
 using namespace std;
-
 
 /**
  * @brief Return an iterator which points to the first instance of the given value
@@ -16,5 +14,7 @@ using namespace std;
  */
 std::vector<int>::iterator findGivenValue(std::vector<int>& v, int given)
 {
+    return std::find(v.begin(), v.end(), given);
 }
+
 

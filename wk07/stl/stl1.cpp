@@ -1,11 +1,9 @@
 #include <iterator>
 #include <vector>
 #include <algorithm>
-
 #include "test.hh"
 
 using namespace std;
-
 
 /**
  * @brief sort a given vector to an ascending order
@@ -15,6 +13,8 @@ using namespace std;
  */
 int sortAsc(std::vector<int>& v)
 {
-    return EXIT_FAILURE;
+    std::sort(v.begin(), v.end());
+    return EXIT_SUCCESS; // You can safely return EXIT_SUCCESS as std::sort won't "fail" given valid iterators
 }
+
 
